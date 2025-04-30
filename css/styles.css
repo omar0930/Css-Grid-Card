@@ -1,0 +1,506 @@
+/* base styling  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.parent-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Upper-1 Upper-1 Upper-2 Upper-2"
+    "middle-1 main-1 main-1 middle-3"
+    "middle-2 main-2 main-2 middle-3"
+    "bottom-1 bottom-2 bottom-3 bottom-3";
+}
+
+/* Common Styles */
+.caps-lock {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #86868b;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #0071e3;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.download-btn:hover {
+  background: #0077ed;
+}
+.blue-underline-link {
+  color: #27b9c2;
+}
+
+/* Div1 - iPhone Section */
+.Upper-1 {
+  grid-area: Upper-1;
+  padding: 0 4%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left-side {
+  width: 32%;
+}
+
+.iphone-image {
+  width: 250px;
+  margin-top: 40px;
+}
+
+.inside-text {
+  margin: 10px 0 20px;
+  font-family: Arvo, sans-serif;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #333;
+}
+
+.gray-text {
+  color: #9fa3a7;
+  line-height: 26px;
+  font-size: 16px;
+}
+
+/* Div2 - Rotary Evaporator Section */
+.Upper-2 {
+  grid-area: Upper-2;
+  background: #f5f5f7;
+  padding: 50px 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Upper-2 .caps-lock {
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  color: #86868b;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.Upper-2 .inside-text {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #1d1d1f;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.Upper-2 br {
+  display: block;
+  content: "";
+  margin-bottom: 8px;
+}
+
+/* Div3 - Keyboard Section */
+.middle-1 {
+  grid-area: middle-1;
+  background-color: tomato;
+  padding: 40px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.keyboard-image {
+  width: 300px;
+  margin-bottom: 25px;
+}
+
+.middle-1 h3 {
+  font-family: Arvo, sans-serif;
+  font-size: 22px;
+  line-height: 32px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.gold-text {
+  color: #ffc80a;
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+/* Div4 - iMac Section */
+.main-1 {
+  grid-area: main-1;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.main-1 .left-side {
+  width: 50%;
+  max-width: 250px;
+  position: relative;
+  overflow: visible;
+}
+
+.imac-image {
+  position: relative;
+  left: -160%;
+  width: 250%;
+  max-width: none;
+  vertical-align: middle;
+  top: 41px;
+}
+
+.main-1 .right-side {
+  width: 40%;
+  padding-left: 30px;
+}
+
+.main-1 .caps-lock {
+  font-size: 12px;
+  letter-spacing: 2.4px;
+  color: #9fa3a7;
+  margin-bottom: 15px;
+}
+
+.main-1 h3 {
+  font-family: Arvo, sans-serif;
+  font-size: 22px;
+  line-height: 32px;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.main-1 .gray-text {
+  font-size: 16px;
+  line-height: 26px;
+  color: #9fa3a7;
+  margin-bottom: 30px;
+}
+
+/* iCloud Section (middle-3) */
+.middle-3 {
+  grid-area: middle-3;
+  background-color: #8f76bc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.floppy-circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: #8166b0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.white-popular-flag {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: #8f76bc;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.floppy-image {
+  width: 120px;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.text-inside-circle {
+  position: absolute;
+  bottom: 30px;
+  color: white;
+  font-family: "Arvo", serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.icloud-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-top: 180px;
+}
+
+.icloud-content h2 {
+  font-family: "Arvo", serif;
+  font-size: 42px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.icloud-description {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.golden-download-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #ffd966;
+  color: black;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+/* Div6 - gaming section */
+.middle-2 {
+  grid-area: middle-2;
+  background-color: white;
+  padding: 40px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.controller-image {
+  width: 300px;
+  margin-bottom: 25px;
+  position: relative;
+  left: -10%;
+}
+.middle-1 h3 {
+  font-family: Arvo, sans-serif;
+  font-size: 22px;
+  line-height: 32px;
+  color: white;
+  margin-bottom: 5px;
+}
+.cyan-text {
+  color: #27b9c2;
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* Best Choice Section (main-2) */
+.main-2 {
+  grid-area: main-2;
+  background-color: #93b6b7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.orange-popular-flag {
+  position: absolute;
+  top: 20px;
+  left: 12px;
+  background-color: #fa684f;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.main-2 h2 {
+  font-family: "Arvo", serif;
+  font-size: 42px;
+  color: white;
+  text-align: center;
+  line-height: 1.2;
+  margin: 20px 0;
+  z-index: 1;
+}
+
+.main-2 img:first-of-type {
+  position: relative;
+  left: -10%;
+  width: 100%;
+  z-index: 2;
+}
+
+.main-2 img:last-of-type {
+  position: absolute;
+  width: 80%;
+  bottom: 0;
+}
+/* Div8 - twitter-visit-section */
+.bottom-1 {
+  grid-area: bottom-1;
+  background-color: #35cfed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.twitter-circle {
+  width: 291px;
+  height: 303px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bottom-1 h4 {
+  font-family: Arvo, sans-serif;
+  font-size: 32px;
+  line-height: 1.2;
+  color: white;
+  font-weight: 700;
+  margin-top: 15px;
+}
+.twitter-logo {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 1;
+}
+/* Div9 - flexing-section */
+.bottom-2 {
+  grid-area: bottom-2;
+  background-color: #f7f8f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.bottom-2 .inside-text {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #1d1d1f;
+  margin: 15px 0;
+  text-align: center;
+}
+.bottom-2 br {
+  display: block;
+  content: "";
+  margin-bottom: 8px;
+}
+.green-popular-flag {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #7bc424;
+  padding: 8px 20px;
+  border-radius: 20px;
+  position: relative;
+}
+/* Div10 - tv-section */
+.bottom-3 {
+  grid-area: bottom-3;
+  background-color: #282a2b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  position: relative;
+  overflow: hidden;
+}
+
+.left-side {
+  position: relative;
+  width: 50%;
+}
+
+.tv-image {
+  width: 120%;
+  max-width: 600px;
+  position: relative;
+  left: -15%;
+  transform: translateY(10%);
+}
+
+.inside-text-tv {
+  color: white;
+  font-family: "Arvo", serif;
+  font-size: 32px;
+  line-height: 1.3;
+  width: 40%;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}

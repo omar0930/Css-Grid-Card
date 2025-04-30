@@ -1,0 +1,170 @@
+/* ====== Small Devices (Mobile Phones) ====== */
+@media (max-width: 768px) {
+  .parent-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "Upper-1"
+      "Upper-2"
+      "middle-1"
+      "main-1"
+      "middle-2"
+      "middle-3"
+      "main-2"
+      "bottom-1"
+      "bottom-2"
+      "bottom-3";
+  }
+
+  .Upper-1,
+  .Upper-2,
+  .middle-1,
+  .main-1,
+  .middle-2,
+  .middle-3,
+  .main-2,
+  .bottom-1,
+  .bottom-2,
+  .bottom-3 {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-1,
+  .bottom-3 {
+    flex-direction: column;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .inside-text,
+  .inside-text-tv,
+  .main-2 h2,
+  .icloud-content h2,
+  .bottom-2 .inside-text {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .main-1 .right-side {
+    padding-left: 0;
+  }
+
+  .iphone-image,
+  .keyboard-image,
+  .controller-image,
+  .imac-image,
+  .tv-image,
+  .floppy-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+  }
+
+  .imac-image {
+    left: 0;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .tv-image {
+    left: 0;
+    transform: translateY(0%);
+  }
+
+  .icloud-content {
+    margin-top: 100px;
+  }
+
+  .inside-text-tv {
+    width: 100%;
+    text-align: center;
+  }
+
+  .text-inside-circle {
+    font-size: 18px;
+    bottom: 10px;
+  }
+
+  .main-2 img:first-of-type,
+  .main-2 img:last-of-type {
+    width: 100%;
+    position: relative;
+    left: 0;
+  }
+}
+
+/* ====== Medium Devices (Tablets) ====== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .parent-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "Upper-1 Upper-2"
+      "middle-1 middle-2"
+      "main-1 main-1"
+      "middle-3 main-2"
+      "bottom-1 bottom-2"
+      "bottom-3 bottom-3";
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .main-1,
+  .bottom-3 {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .tv-image {
+    width: 100%;
+    max-width: 400px;
+    left: 0;
+  }
+
+  .inside-text-tv {
+    width: 100%;
+    text-align: center;
+  }
+
+  .icloud-content {
+    margin-top: 150px;
+  }
+
+  .main-2 img:first-of-type,
+  .main-2 img:last-of-type {
+    width: 100%;
+    position: relative;
+    left: 0;
+  }
+
+  .imac-image {
+    width: 150%;
+    left: -25%;
+  }
+}
+
+/* ====== Large Devices (Desktops) ====== */
+@media (min-width: 1025px) {
+  .parent-container {
+    padding: 20px 0;
+  }
+
+  .main-1 .left-side {
+    width: 60%;
+  }
+
+  .main-1 .right-side {
+    width: 40%;
+  }
+}
